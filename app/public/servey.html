@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Friend Finder</title>
+    <!-- <link rel="icon" href="assets/images/N.png" type="image/gif" sizes="16x16"> -->
+    <!-- Style Sheets links -->
+    <link rel="stylesheet" type="text/css" href="/reset.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <!-- Scripts -->  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body> 
+    <div  id="header">   
+      <div class="container text-left">
+        <h2>Nelum</h2>
+      </div>
+    </div>
+    <div class = "wrapper" id = "data">
+      <div class="container text-center">
+        <h1><div id="Logo">Friend Finder</div></h1>
+        
+        <div class =" questions text-left">
+          <h3>Survey Questions </h3><br/><br/>
+          
+          <div class="input-group">
+            <label>Enter your Name.. </label>
+            <input type="text" class="form-control" aria-label="name" id="name" required=""><br/><br/>
+            <label>Link to photo image (Required) </label>
+            <input type="text" class="form-control" aria-label="photo link" id="link" required=""><br/><br/> 
+          </div>
+
+          <h3> Select your likeness for below Characters </h3>
+          
+          <div class ="line1">
+            <h3>Question 1</h3>
+            <h5>Arya Stark - Game of Thrones</h5>
+            <img src = "/aryaStark.jpg" alt="AryaStark" class="characters">
+            <select id="1"> 
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5" selected>4</option>
+            </select>
+          </div>
+          <div class ="line2">
+            <h3>Question 1</h3>
+            <h5>Quesiton 1</h5>
+            <select id="2"> 
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="vw">VW</option>
+              <option value="audi" selected>Audi</option>
+            </select>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div> 
+
+    <div class ="line1 text-center">
+      <a href = "/app/data/friends">Friends Apis</a>
+    </div>
+
+    <footer class="container-fluid text-center" class = "mainFooter">
+      <hr/>
+      <a href="https://www.linkedin.com/in/nelum-sam/" target="_blank" class="fa fa-linkedin"></a>
+      <a id="mail" href="mailto:dnks2000@gmail.com?Subject=Portfolio Site Contact" Target="_top" class="fa fa-envelope"></a>
+      <a href="https://github.com/Dil2000" target="_blank" class="fa fa-github"></a>
+      <p id="email"> dnks2000@gmail.com</p>
+      <p id="footerText">&copy copyright 2017 Nelum Sam</p>
+    </footer>
+    <!-- Java Scripts -->
+<!--     <script type="text/javascript" src="assets/javascripts/portfolio.js"></script> --> 
+  </body>
+</html>
+
+
+
