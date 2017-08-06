@@ -1,27 +1,17 @@
-// A GET Route to /survey which should display the survey page.
-// A default USE route that leads to home.html which displays the home page.
 
-var surveyQuestions = require("../data/surveyQuestions");
-var waitListData = require("../data/waitListData");
+var path = require("path");
 
-module.export = function(app){
+module.exports = function(app){
 
-	app.get("/api/questions",function(req,res){
-		res.json(surveyQuestions);
+	// Basic route that sends the user first to the AJAX Page
+	app.get("/", function(req, res) {
+	  res.sendFile(path.join(__dirname, "/../public/home.html"));
 	});
 
-	app.get("/api/waitlist",function(req,res){
-		res.json(waitListData);
-	})
+	app.get("/servey", function(req, res) {
+	  res.sendFile(path.join(__dirname, "/../public/servey.html"));
+	});
+
 }
 
-app.post("/api/questions",function(req,res){
-	if (surveyQuestions.length < 10){
-		surveyQuestions.push(req.body);
-		res.json(true);
-	}
-	else {
-		waitListData.push(req.body);
-		res.json(false);
-	}
-});
+//working from the server

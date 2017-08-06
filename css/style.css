@@ -26,6 +26,15 @@ body{
   font-size:30px;
 }
 
+#submit{
+  width:200px;
+  height:50px;
+  background-color:#000;
+  color:#fff;
+  font-size:25px;
+  margin:10px;
+}
+
 #image{
   width:60%;
   height:auto;
@@ -46,12 +55,14 @@ body{
   background-color:#c43235;
   padding:10px;
   color:#fff;
+  margin-bottom:5px;
 }
 
 .line2{
   background-color:#300032;
   padding:10px;
   color:#fff;
+  margin-bottom:5px;
 }
 
 #header{
@@ -65,11 +76,12 @@ h1{
 
 select{
   width:30%;
+  color:#000;
 }
 
 .characters{
   height:200px;
-  width:auto;
+  width:200px;
 }
 
 footer,.mainFooter{
