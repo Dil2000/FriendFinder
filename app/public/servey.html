@@ -185,7 +185,7 @@
         <hr/>
         <h2>Your Match</h2>
         <img src="#" id ="matchImage" class="characters" alt="your match">
-        <h4 id="name">Name</h4>
+        <h4 id="matchName">Name</h4>
       </div>      
     </div>
 
@@ -232,9 +232,8 @@
 
           $("#match").css("visibility" ,"visible");
           $("#matchImage").attr("src",data.photo);
-          $("#name").text(data.name);
-          //friends.push(newFriend);
-
+          $("#matchName").text(data.name);
+          console.log("")
         });        
       });      
 
