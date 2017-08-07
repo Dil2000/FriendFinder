@@ -33,12 +33,15 @@
         <div class =" questions text-left">
           <h3>Survey Questions </h3><br/><br/>
           
-          <div class="input-group">
-            <label>Enter your Name.. </label>
-            <input type="text" class="form-control" aria-label="name" id="name" required=""><br/><br/>
-            <label>Link to photo image (Required) </label>
-            <input type="text" class="form-control" aria-label="photo link" id="link" required=""><br/><br/> 
-          </div>
+          <form data-toggle="validator" role="form">
+            <div class="form-group">
+              <p id = "fieldsRequired"></p>
+              <label>Enter your Name.. </label>
+              <input type="text" class="form-control" aria-label="name" id="name" required><br/>
+              <label>Link to photo image (Required) </label>
+              <input type="text" class="form-control" aria-label="photo link" id="link" required><br/>
+            </div>
+          </form>
 
           <h3> Select your likeness for below Characters </h3>
 
@@ -180,7 +183,11 @@
     </div> 
 
     <div class ="text-center">
-      <button btn-default id="submit">Sumbit</button> <br/><br/> 
+      <form data-toggle="validator" role="form">
+        <div class="form-group">
+          <button btn-default id="submit">Sumbit</button> <br/><br/> 
+        </div>
+      </form>
       <div id = "match">
         <hr/>
         <h2>Your Match</h2>
@@ -204,37 +211,56 @@
       $("#submit").on("click", function(event) {
         event.preventDefault();
 
-        var newFriend = {
-          name: $("#name").val().trim(),
-          photo: $("#link").val().trim(),
-          scores: [
-            //$("#1").find(':selected'). attr ('data-id'),
-            parseInt($("#1").val()),
-            parseInt($("#2").val()),
-            parseInt($("#3").val()),
-            parseInt($("#4").val()),
-            parseInt($("#5").val()),
-            parseInt($("#6").val()),
-            parseInt($("#7").val()),
-            parseInt($("#8").val()),
-            parseInt($("#9").val()),
-            parseInt($("#10").val())
-          ]
+        function validation() {
+          var Valid = true;
+          $(".form-control").each(function() {
+            if ($(this).val() === "") {
+              Valid = false;              
+            }
+          });
+          return Valid;
         }
 
-        console.log("Array : " + newFriend);
+        if(validation()) {
 
-        var currentUrl = window.location.origin;
+          $("#fieldsRequired").text("");
 
-        $.post(currentUrl + "/api/friends", newFriend,function(data) {
-          $("#name").val("");
-          $("#link").val("");
+          var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#link").val().trim(),
+            scores: [
+              //$("#1").find(':selected'). attr ('data-id'),
+              parseInt($("#1").val()),
+              parseInt($("#2").val()),
+              parseInt($("#3").val()),
+              parseInt($("#4").val()),
+              parseInt($("#5").val()),
+              parseInt($("#6").val()),
+              parseInt($("#7").val()),
+              parseInt($("#8").val()),
+              parseInt($("#9").val()),
+              parseInt($("#10").val())
+            ]
+          }
 
-          $("#match").css("visibility" ,"visible");
-          $("#matchImage").attr("src",data.photo);
-          $("#matchName").text(data.name);
-          console.log("")
-        });        
+          console.log("Array : " + newFriend);
+
+          var currentUrl = window.location.origin;
+
+          $.post(currentUrl + "/api/friends", newFriend,function(data) {
+            $("#name").val("");
+            $("#link").val("");
+
+            $("#match").css("visibility" ,"visible");
+            $("#matchImage").attr("src",data.photo);
+            $("#matchName").text(data.name);
+            console.log("")
+          });     
+        } 
+        else{
+          $("#fieldsRequired").text(" * Fields Required to be filled to continue");
+           window.scrollTo(0, 0);
+        }  
       });      
 
     </script>

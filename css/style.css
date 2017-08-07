@@ -51,6 +51,10 @@ body{
   margin-bottom:30px;
 }
 
+#fieldsRequired{
+  color:red;
+}
+
 .line1{
   background-color:#c43235;
   padding:10px;
