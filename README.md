@@ -6,7 +6,7 @@ This application is a compatibility-based "FriendFinder" application -- basicall
 
 #### How to Use the app :traffic_light:
 
-Goto the Survey Page ,
+### Goto the Survey Page
 	* Add Name
 	* Link to one of your pictures
 	* Select your the likeness for 10 given questions
