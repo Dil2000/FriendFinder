@@ -55,19 +55,26 @@ body{
   background-color:#c43235;
   padding:10px;
   color:#fff;
-  margin-bottom:5px;
+  margin:10px;
+  display:inline-block;
 }
 
 .line2{
   background-color:#300032;
   padding:10px;
   color:#fff;
-  margin-bottom:5px;
+  margin:10px;
+  display:inline-block;
 }
 
 #header{
   background-color:#300032;
   color:#fff;
+}
+
+#FourOFour{
+  font-size :250px;
+  color:#c43235;
 }
 
 h1{
@@ -134,17 +141,17 @@ a:active{
 
 a:link{
   text-decoration: none;
-  color:#e8edf3;
+ /* color:#e8edf3;*/
 }
 
 a:visited{
   text-decoration:none;
-  color:#e8edf3;
+  /*color:#e8edf3;*/
 }
 
 a:hover{
   text-decoration:none;
-  color:#e6cf8b;
+  /*color:#e6cf8b;*/
 }
 
 /* Icons */
