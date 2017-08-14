@@ -1,7 +1,7 @@
 
 
 body{
-  font-family: 'Oxygen', sans-serif; 
+  font-family: 'Signika Negative', sans-serif;
   background-color:#e6e6e8;
   color:#300032;
   font-size:14px;
@@ -14,8 +14,9 @@ body{
 
 #Logo{
   padding:16px;
-  text-decoration: underline;
-  text-decoration-style:wavy;
+/*  text-decoration: underline;
+  text-decoration-style:wavy;*/
+  font-family: 'Berkshire Swash', cursive;
 }
 
 #gotosurvey{
@@ -24,6 +25,7 @@ body{
   background-color:#c43235;
   color:#e6e6e8;
   font-size:30px;
+  border-radius:90%;
 }
 
 #submit{
@@ -83,6 +85,10 @@ body{
 
 h1{
   font-size:60px;
+}
+
+h2{
+  font-family: 'Berkshire Swash', cursive;
 }
 
 select{
